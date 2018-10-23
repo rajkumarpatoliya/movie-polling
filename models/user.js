@@ -9,4 +9,8 @@ const user = new mongoose.Schema({
   password: String
 });
 
-module.exports = mangoose.model("Users", user);
+<<<<<<< HEAD
+module.exports = mangoose.model("User", user);
+=======
+module.exports = mongoose.model("User", user);
+>>>>>>> 73662e71593b1e1af1ac6e6ace2c8aaa10a7e881
