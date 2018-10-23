@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 import mongoose from "mongoose";
 
 const movie = mongoose.Schema({
