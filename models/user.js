@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 import mongoose from "mongoose";
 
 const user = new mongoose.Schema({
@@ -9,8 +10,4 @@ const user = new mongoose.Schema({
   password: String
 });
 
-<<<<<<< HEAD
 module.exports = mangoose.model("User", user);
-=======
-module.exports = mongoose.model("User", user);
->>>>>>> 73662e71593b1e1af1ac6e6ace2c8aaa10a7e881
