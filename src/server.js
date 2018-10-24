@@ -3,8 +3,8 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 
-import movie from "./routes/movie";
-import user from "./routes/user";
+import movieRouter from "./routes/movie";
+import userRouter from "./routes/user";
 
 import config from "../config";
 
@@ -24,8 +24,8 @@ const app = express();
 
 app.use(cors());
 
-// app.use("/movie", movie);
-// app.use("/user", user);
+app.use("/movie", movieRouter);
+app.use("/user", userRouter);
 
 // port
 const port = 3000;
