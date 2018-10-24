@@ -27,6 +27,8 @@ app.use(cors());
 // app.use("/movie", movie);
 // app.use("/user", user);
 
-app.listen("3000", () => {
-  console.log("Server is running on PORT 3000");
+// port
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
