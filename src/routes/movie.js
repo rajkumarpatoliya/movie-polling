@@ -1,13 +1,29 @@
 /* jshint esversion: 6 */
 import express from "express";
-const movieRouter = express.Router();
+import Movie from "../models/movie";
 
-movieRouter
+const router = express.Router();
 
-  .get("/movie", (req, res) => {
-    res.json();
-  })
-  .get("/movie/:id", (req, res) => {
-    res.json();
+router.post("/new", (req, res) => {
+  const movie = new Movie({
+    id: req.body.id,
+    title: req.body.title,
+    release_date: req.body.release,
+    actors: req.body.actors,
+    director: req.body.directors,
+    rating: req.body.rating,
+    fan: req.body.fan
   });
-export default movieRouter;
+  movie.save((err, success) => {
+    if (err) {
+      res.json(err);
+    }
+    res.json(success);
+  });
+});
+
+// router.get("/movies", (req,res) => {
+//     const
+// });
+
+module.exports = router;
